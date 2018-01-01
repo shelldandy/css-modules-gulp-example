@@ -1,0 +1,54 @@
+// =======================================
+// =            Global Config            =
+// =======================================
+
+// Typography
+$system-fonts: -apple-system, system-ui, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
+$font-family--primary: 'Open Sans', sans-serif;
+
+// Text
+$base-font-size: 1em;
+$base-line: 1.3;
+
+// Modular Scale - https://github.com/modularscale/modularscale-sass/tree/3.x
+$ms-base:  1rem;
+$ms-ratio: $major-third;
+
+// Stuff for the BassCss-like classes
+$total-stops: 5;
+
+// Typographic Weights
+$fw-thin: 100;
+$fw-extra-light: 200;
+$fw-light: 300;
+$fw-regular: 400;
+$fw-medium: 500;
+$fw-semi-bold: 600;
+$fw-bold: 700;
+$fw-extra-bold: 800;
+$fw-ultra-bold: 900;
+
+// Colors
+$white: #ffffff;
+$black: #4a4a4a;
+$gray: #797e83;
+$orange: #EC7024;
+$blue: #2ba5e0;
+
+$main-color: $orange;
+
+// Transitions
+$trns-duration: .2s;
+$sexy-bezier: cubic-bezier(0,0,0,2.41);
+$sexy-transition: $trns-duration $sexy-bezier;
+
+// Grid
+$column-gutter: 20px;
+$columns--total: 12;
+
+// Breakpoints
+$breakpoints: (
+  tablet      : em(768px, 16),
+  laptop      : em(1024px, 16),
+  desktop     : em(1440px, 16)
+);

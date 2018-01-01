@@ -1,0 +1,65 @@
+// Atomic typography
+.italic {
+  font-style: italic;
+}
+
+.caps {
+  text-transform: uppercase;
+}
+
+.left-align {
+  text-align: left;
+}
+
+.right-align {
+  text-align: right;
+}
+
+.center {
+  text-align: center;
+}
+
+.no-decoration {
+  text-decoration: none;
+}
+
+.underline {
+  text-decoration: underline;
+}
+
+// Font Weights
+.fw-thin {
+  font-weight: $fw-thin;
+}
+
+.fw-extra-light {
+  font-weight: $fw-extra-light;
+}
+
+.fw-light {
+  font-weight: $fw-light;
+}
+
+.fw-regular {
+  font-weight: $fw-regular;
+}
+
+.fw-medium {
+  font-weight: $fw-medium;
+}
+
+.fw-semi-bold {
+  font-weight: $fw-semi-bold;
+}
+
+.fw-bold {
+  font-weight: $fw-bold;
+}
+
+.fw-extra-bold {
+  font-weight: $fw-extra-bold;
+}
+
+.fw-ultra-bold {
+  font-weight: $fw-ultra-bold;
+}

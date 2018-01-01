@@ -1,0 +1,68 @@
+html {
+  min-height: 100%;
+  position: relative;
+  background-color: $white;
+  color: $black;
+  font-family: $system-fonts;
+  font-weight: $fw-regular;
+  line-height: $base-line;
+  font-size: $base-font-size;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  &.wf-active {
+    font-family: $font-family--primary;
+  }
+}
+
+input,
+textarea {
+  font-family: inherit;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: $trns-duration;
+  &:focus {
+    outline: 1px dotted;
+  }
+}
+
+// Baseline Headings
+h1,
+.h1 {
+  @extend %header-default;
+  font-size: ms(5);
+  line-height: 1.2;
+}
+
+h2,
+.h2 {
+  @extend %header-default;
+  font-size: ms(4);
+  line-height: 1.3;
+}
+
+h3,
+.h3 {
+  @extend %header-default;
+  font-size: ms(3);
+}
+
+h4, .h4 {
+  @extend %header-default;
+  font-size: ms(2);
+}
+
+h5,
+.h5 {
+  @extend %header-default;
+  font-size: ms(1);
+}
+
+h6,
+.h6 {
+  @extend %header-default;
+  font-size: ms(0);
+}

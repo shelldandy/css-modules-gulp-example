@@ -1,0 +1,34 @@
+html {
+  box-sizing: border-box;
+}
+*, *::before, *::before {
+  box-sizing: inherit;
+}
+
+::selection {
+  background: $main-color;
+  color: $white;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+img {
+  max-width: 100%;
+}
+
+.is-hidden {
+  position: absolute;
+  height: 0;
+  width: 0;
+  visibility: hidden;
+}
+
+svg[class^="icon-"] {
+  fill: currentColor;
+  stroke: none;
+  max-width: 100%;
+}

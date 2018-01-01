@@ -10,9 +10,11 @@ gulp.task('main:styles', () =>
     .pipe(when(!production, $.sourcemaps.init()))
     .pipe($.sass({importer: moduleImporter()}))
     .on('error', $.sass.logError)
-    .pipe($.autoprefixer({
-      browsers: config.browsers
-    }))
+    .pipe($.postcss([
+      require('autoprefixer')({
+        browsers: config.browsers
+      })
+    ]))
     .pipe(when(production, $.groupCssMediaQueries()))
     .pipe(when(production, $.csscomb()))
     .pipe(when(!production, $.sourcemaps.write('./')))
