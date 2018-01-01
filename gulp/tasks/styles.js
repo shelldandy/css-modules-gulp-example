@@ -29,6 +29,7 @@ gulp.task('main:styles', () =>
     .pipe($.postcss(POSTCSS_PLUGINS))
     .pipe(when(production, $.groupCssMediaQueries()))
     .pipe(when(production, $.csscomb()))
+    .pipe($.concat('main.css'))
     .pipe(when(!production, $.sourcemaps.write('./')))
     .pipe(gulp.dest(config.directories.dist.styles))
 
