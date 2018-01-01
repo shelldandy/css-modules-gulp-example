@@ -1,0 +1,70 @@
+[
+  {
+    "timeStamp": 1514838817531,
+    "time": 763,
+    "hash": "3a5c439f3d847e21a63d",
+    "errors": [],
+    "size": 10438,
+    "assets": [
+      {
+        "name": "main.min.js",
+        "chunks": [
+          0
+        ],
+        "size": 292,
+        "minified": true
+      },
+      {
+        "name": "vendor.min.js",
+        "chunks": [
+          1
+        ],
+        "size": 1400,
+        "minified": true
+      },
+      {
+        "name": "main.min.js.map",
+        "chunks": [
+          0
+        ],
+        "size": 1109
+      },
+      {
+        "name": "vendor.min.js.map",
+        "chunks": [
+          1
+        ],
+        "size": 7637
+      }
+    ],
+    "chunks": [
+      {
+        "size": 748,
+        "files": [
+          "main.min.js",
+          "main.min.js.map"
+        ],
+        "modules": [
+          {
+            "name": "./src/assets/js/main.js",
+            "size": 675,
+            "id": 0
+          },
+          {
+            "name": "./src/assets/js/general/index.js",
+            "size": 73,
+            "id": 1
+          }
+        ]
+      },
+      {
+        "size": 0,
+        "files": [
+          "vendor.min.js",
+          "vendor.min.js.map"
+        ],
+        "modules": []
+      }
+    ]
+  }
+]

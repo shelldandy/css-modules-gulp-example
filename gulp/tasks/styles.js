@@ -4,10 +4,20 @@ const when = require('gulp-if')
 const $ = require('gulp-load-plugins')()
 const production = config.production
 const moduleImporter = require('sass-module-importer')
+const fs = require('fs')
 
 const POSTCSS_PLUGINS = [
   require('autoprefixer')({
     browsers: config.browsers
+  }),
+  require('postcss-modules')({
+    generateScopedName: production ? '[hash:base64:5]' : '[local]___[hash:base64:5]',
+    getJSON: function (cssFileName, json, outputFileName) {
+      var path = require('path')
+      var cssName = path.basename(cssFileName, '.css')
+      var jsonFileName = path.resolve('./dist/' + cssName + '.json')
+      fs.writeFileSync(jsonFileName, JSON.stringify(json))
+    }
   })
 ]
 
