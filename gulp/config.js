@@ -10,7 +10,7 @@ module.exports = {
   directories: {
     src: {
       base: 'src',
-       markup: 'src/pug',
+      markup: 'src/pug',
       fonts: 'src/assets/fonts',
       icons: 'src/assets/icons',
       images: 'src/assets/images',
@@ -24,7 +24,7 @@ module.exports = {
       icons: 'dist/assets/icons',
       images: 'dist/assets/images',
       scripts: 'dist/assets/js',
-      styles: 'dist/assets/css',
+      styles: 'dist/assets/css'
     }
   },
   project: {
@@ -32,7 +32,7 @@ module.exports = {
     cssVendorFile: 'src/assets/styles/vendor.scss',
     jsMainFile: 'src/assets/js/main.js',
     fontFiles: [
-      'src/assets/fonts/**/*',
+      'src/assets/fonts/**/*'
 
     ]
   },
@@ -55,13 +55,13 @@ module.exports = {
   },
   // For autoprefixer
   browsers: [
-    "last 2 Chrome versions",
-    "last 2 ChromeAndroid versions",
-    "last 2 Firefox versions",
-    "last 2 Safari versions",
-    "last 2 ios versions",
-    "last 1 ie versions",
-    "last 2 Edge versions",
-    "last 2 Opera versions"
+    'last 2 Chrome versions',
+    'last 2 ChromeAndroid versions',
+    'last 2 Firefox versions',
+    'last 2 Safari versions',
+    'last 2 ios versions',
+    'last 1 ie versions',
+    'last 2 Edge versions',
+    'last 2 Opera versions'
   ]
 }
