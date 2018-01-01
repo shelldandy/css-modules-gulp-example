@@ -1,0 +1,20 @@
+//
+// modules
+//
+
+@import 'variables';
+@import 'mixins';
+
+// screens:start
+@import 'screens/_base';
+
+@import 'screens/screen_1';
+// screens:end
+
+// components:start
+@import 'components/_header';
+@import 'components/_footer';
+@import 'components/_nav';
+@import 'components/_forms';
+@import 'components/_buttons';
+// components:end
