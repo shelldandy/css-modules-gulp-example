@@ -1,3 +1,4 @@
+@import "../1-abstracts/index.scss";
 .row {
   margin: 0 (-$column-gutter / 2);
   @include cf;
@@ -7,7 +8,7 @@
   display: flex;
 }
 
-%column {
+.column {
   padding: 0 ($column-gutter / 2);
   width: 100%;
 }

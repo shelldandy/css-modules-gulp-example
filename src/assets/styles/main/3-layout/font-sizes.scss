@@ -1,3 +1,4 @@
+@import "../1-abstracts/index.scss";
 @for $i from 0 through $total-stops {
   // Font sizes
   .fs-#{$i} {

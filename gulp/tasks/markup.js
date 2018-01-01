@@ -1,12 +1,11 @@
-const gulp    = require('gulp')
-const config  = require('../config')
+const gulp = require('gulp')
+const config = require('../config')
 const $ = require('gulp-load-plugins')()
 const production = config.production
 const fs = require('fs')
 
-
 gulp.task('markup', () =>
-  gulp.src(config.directories.src.markup+'/*.pug')
+  gulp.src(config.directories.src.markup + '/*.pug')
     .pipe($.pug({
       baseDir: config.directories.src.markup,
       locals: {
