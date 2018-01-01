@@ -1,10 +1,6 @@
-%row {
+.row {
   margin: 0 (-$column-gutter / 2);
   @include cf;
-}
-
-.row {
-  @extend %row;
 }
 
 .row--flex {
