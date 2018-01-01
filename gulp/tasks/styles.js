@@ -15,7 +15,7 @@ const POSTCSS_PLUGINS = [
     getJSON: function (cssFileName, json, outputFileName) {
       var path = require('path')
       var cssName = path.basename(cssFileName, '.css')
-      var jsonFileName = path.resolve('./dist/' + cssName + '.json')
+      var jsonFileName = path.resolve('./dist/modules/' + cssName + '.json')
       fs.writeFileSync(jsonFileName, JSON.stringify(json))
     }
   })
