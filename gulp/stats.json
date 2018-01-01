@@ -66,5 +66,59 @@
         "modules": []
       }
     ]
+  },
+  {
+    "timeStamp": 1514845366940,
+    "time": 430,
+    "hash": "ad9cb12d73f25504a065",
+    "errors": [],
+    "size": 16892,
+    "assets": [
+      {
+        "name": "main.js",
+        "chunks": [
+          0
+        ],
+        "size": 3200,
+        "miniSize": 1155,
+        "minified": false
+      },
+      {
+        "name": "vendor.js",
+        "chunks": [
+          1
+        ],
+        "size": 13692,
+        "miniSize": 5072,
+        "minified": false
+      }
+    ],
+    "chunks": [
+      {
+        "size": 748,
+        "files": [
+          "main.js"
+        ],
+        "modules": [
+          {
+            "name": "./src/assets/js/main.js",
+            "size": 675,
+            "id": 0
+          },
+          {
+            "name": "./src/assets/js/general/index.js",
+            "size": 73,
+            "id": 1
+          }
+        ]
+      },
+      {
+        "size": 0,
+        "files": [
+          "vendor.js"
+        ],
+        "modules": []
+      }
+    ]
   }
 ]
