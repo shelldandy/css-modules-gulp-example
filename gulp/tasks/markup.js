@@ -5,7 +5,11 @@ const production = config.production
 const fs = require('fs')
 
 const POSTHTML_PLUGINS = [
-  require('posthtml-css-modules')(`${config.directories.src.cssModules}/`)
+  require('posthtml-css-modules')(`${config.directories.src.cssModules}/`),
+  require('posthtml-img-autosize')({
+    root: `./${config.directories.dist.base}`,
+    processEmptySize: true
+  })
 ]
 
 gulp.task('markup', () =>
