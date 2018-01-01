@@ -4,7 +4,6 @@ const when = require('gulp-if')
 const $ = require('gulp-load-plugins')()
 const production = config.production
 const moduleImporter = require('sass-module-importer')
-const fs = require('fs-path')
 
 const POSTCSS_PLUGINS = [
   require('autoprefixer')({
@@ -13,9 +12,10 @@ const POSTCSS_PLUGINS = [
   require('postcss-modules')({
     generateScopedName: production ? '[hash:base64:5]' : '[local]___[hash:base64:5]',
     getJSON: function (cssFileName, json, outputFileName) {
-      var path = require('path')
-      var cssName = path.basename(cssFileName, '.css')
-      var jsonFileName = path.resolve('./dist/modules/' + cssName + '.json')
+      const fs = require('fs-path')
+      const path = require('path')
+      const cssName = path.basename(cssFileName, '.css')
+      const jsonFileName = path.resolve(`./${config.directories.src.cssModules}/${cssName}.json`)
       fs.writeFileSync(jsonFileName, JSON.stringify(json))
     }
   })
