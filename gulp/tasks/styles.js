@@ -6,9 +6,7 @@ const production = config.production
 const moduleImporter = require('sass-module-importer')
 
 const POSTCSS_PLUGINS = [
-  require('autoprefixer')({
-    browsers: config.browsers
-  }),
+  require('autoprefixer')({ browsers: config.browsers }),
   require('postcss-modules')({
     generateScopedName: production ? '[hash:base64:5]' : '[local]___[hash:base64:5]',
     getJSON: function (cssFileName, json, outputFileName) {
@@ -44,9 +42,9 @@ gulp.task('vendor:styles', () =>
     .pipe(when(!production, $.sourcemaps.init()))
     .pipe($.sass({importer: moduleImporter()}))
     .on('error', $.sass.logError)
-    .pipe($.autoprefixer({
-      browsers: config.browsers
-    }))
+    .pipe($.postcss([
+      require('autoprefixer')({browsers: config.browsers})
+    ]))
     .pipe(when(production, $.groupCssMediaQueries()))
     .pipe(when(production, $.csscomb()))
     .pipe(when(!production, $.sourcemaps.write('./')))
