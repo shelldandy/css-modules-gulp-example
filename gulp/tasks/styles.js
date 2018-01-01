@@ -4,27 +4,29 @@ const when = require('gulp-if')
 const $ = require('gulp-load-plugins')()
 const production = config.production
 const moduleImporter = require('sass-module-importer')
-const fs = require('fs')
+const fs = require('fs-path')
+
+const POSTCSS_PLUGINS = [
+  require('autoprefixer')({
+    browsers: config.browsers
+  }),
+  require('postcss-modules')({
+    generateScopedName: production ? '[hash:base64:5]' : '[local]___[hash:base64:5]',
+    getJSON: function (cssFileName, json, outputFileName) {
+      var path = require('path')
+      var cssName = path.basename(cssFileName, '.css')
+      var jsonFileName = path.resolve('./dist/' + cssName + '.json')
+      fs.writeFileSync(jsonFileName, JSON.stringify(json))
+    }
+  })
+]
 
 gulp.task('main:styles', () =>
   gulp.src(config.project.cssMainFile)
     .pipe(when(!production, $.sourcemaps.init()))
     .pipe($.sass({importer: moduleImporter()}))
     .on('error', $.sass.logError)
-    .pipe($.postcss(
-      require('autoprefixer')({
-        browsers: config.browsers
-      }),
-      require('postcss-modules')({
-        generateScopedName: production ? '[hash:base64:5]' : '[local]___[hash:base64:5]',
-        getJSON: function (cssFileName, json, outputFileName) {
-          var path = require('path')
-          var cssName = path.basename(cssFileName, '.css')
-          var jsonFileName = path.resolve('./dist/assets/modules/' + cssName + '.json')
-          fs.writeFileSync(jsonFileName, JSON.stringify(json))
-        }
-      })
-    ))
+    .pipe($.postcss(POSTCSS_PLUGINS))
     .pipe(when(production, $.groupCssMediaQueries()))
     .pipe(when(production, $.csscomb()))
     .pipe(when(!production, $.sourcemaps.write('./')))
