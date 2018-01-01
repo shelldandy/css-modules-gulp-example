@@ -44,24 +44,21 @@ const reload = done => {
 }
 
 gulp.task('watch', done => {
-  //static files
-  
-    gulp.watch(config.directories.src.markup+'/**/*.pug', gulp.series( 'markup', reload ))
-    gulp.watch(config.directories.src.icons+'/**/*.svg', gulp.series( 'markup', reload ))
-  
+  // static files
 
-  gulp.watch(config.directories.src.images+'/**/*', gulp.series( 'images', reload ))
+  gulp.watch(config.directories.src.markup + '/**/*.pug', gulp.series('markup', reload))
+  gulp.watch(config.directories.src.icons + '/**/*.svg', gulp.series('markup', reload))
 
-  //scripts
-  gulp.watch(config.directories.src.scripts+'/**/*.js', gulp.series( 'scripts', reload ))
+  gulp.watch(config.directories.src.images + '/**/*', gulp.series('images', reload))
+
+  // scripts
+  gulp.watch(config.directories.src.scripts + '/**/*.js', gulp.series('scripts', reload))
 
   // Fonts
   gulp.watch(config.project.fontFiles, gulp.series('fonts', reload))
 
-  //styles
+  // styles
   gulp.watch(config.directories.src.styles + '/**/*.scss', gulp.series('styles', reload))
 
   done()
 })
-
-

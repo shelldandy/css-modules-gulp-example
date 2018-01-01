@@ -1,5 +1,5 @@
 var requireDir = require('require-dir')
-var gulp    = require('gulp')
+var gulp = require('gulp')
 
 // Add all the tasks and files, boom!
 requireDir('gulp', {
@@ -11,9 +11,8 @@ gulp.task('build', gulp.series(
   'images',
   'scripts',
   'fonts',
-  
   'markup',
-    'styles'
+  'styles'
 ))
 
 gulp.task('serve', gulp.parallel('browser-sync', 'watch'))
