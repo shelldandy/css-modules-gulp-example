@@ -1,7 +1,7 @@
-const title = document.querySelector('#title')
+const title = document.querySelector('h1')
 
 const changeTitle = () => {
-  title.textContent = 'Damnnnn Modules'
+  title.textContent = 'Cool Modules'
 }
 
 export default changeTitle
