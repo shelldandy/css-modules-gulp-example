@@ -40,6 +40,9 @@ gulp.task('browser-sync', done => {
         middleware: [
           webpackDevMiddleware(bundler),
           webpackHotMiddleware(bundler)
+        ],
+        watchEvents: [
+          'add', 'change'
         ]
       })
       openBrowser(urls.localUrlForBrowser)

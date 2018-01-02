@@ -13,7 +13,7 @@ gulp.task('watch', done => {
   gulp.watch(config.directories.src.icons + '/**/*.svg', gulp.series('markup', reload))
   gulp.watch(config.directories.src.images + '/**/*', gulp.series('images', reload))
   // scripts
-  gulp.watch(config.directories.src.scripts + '/**/*.js', gulp.series('scripts', reload))
+  gulp.watch(config.directories.src.scripts + '/**/*.js', gulp.series('scripts'))
   // Fonts
   gulp.watch(config.project.fontFiles, gulp.series('fonts', reload))
   // styles

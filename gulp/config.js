@@ -31,7 +31,7 @@ module.exports = {
   project: {
     cssMainFile: 'src/assets/styles/main/**/!(_)*.scss',
     cssVendorFile: 'src/assets/styles/vendor.scss',
-    jsMainFile: 'src/assets/js/main.js',
+    jsMainFile: 'src/assets/js/index.js',
     fontFiles: [
       'src/assets/fonts/**/*'
 

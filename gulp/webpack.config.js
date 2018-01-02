@@ -27,6 +27,10 @@ let plugins = [
   // thanks create-react-app
   new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/)
 ]
+const devPlugins = [
+  new webpack.NamedModulesPlugin(),
+  new webpack.HotModuleReplacementPlugin()
+]
 const productionPlugins = [
   new webpack.optimize.ModuleConcatenationPlugin(),
   new webpack.DefinePlugin({
@@ -43,6 +47,7 @@ const debugPlugins = [
   })
 ]
 
+if (!production) plugins = [...plugins, ...devPlugins]
 if (production) plugins = [...plugins, ...productionPlugins]
 if (debug) plugins = [...plugins, ...debugPlugins]
 
