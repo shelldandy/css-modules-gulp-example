@@ -47,7 +47,15 @@ if (production) plugins = [...plugins, ...productionPlugins]
 if (debug) plugins = [...plugins, ...debugPlugins]
 
 const CONFIG = {
-  entry: ENTRY_PATH,
+  entry: production ? {
+    main: ENTRY_PATH
+  } : {
+    main: [
+      ENTRY_PATH,
+      'webpack/hot/dev-server',
+      'webpack-hot-middleware/client'
+    ]
+  },
   devtool: production ? 'source-map' : 'inline-source-map',
   module: {
     rules: [{

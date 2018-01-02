@@ -62,6 +62,8 @@
     "stylelint": "^8.4.0",
     "stylelint-config-pixel2html": "^1.0.0",
     "webpack-bundle-analyzer": "^2.9.1",
+    "webpack-dev-middleware": "^2.0.3",
+    "webpack-hot-middleware": "^2.21.0",
     "webpack-monitor": "^1.0.14"
   },
   "stylelint": {
