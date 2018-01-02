@@ -41,8 +41,8 @@ gulp.task('browser-sync', done => {
           webpackDevMiddleware(bundler),
           webpackHotMiddleware(bundler)
         ],
-        watchEvents: [
-          'add', 'change'
+        files: [
+          '**/*.css'
         ]
       })
       openBrowser(urls.localUrlForBrowser)
