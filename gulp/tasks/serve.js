@@ -5,7 +5,7 @@ const openBrowser = require('react-dev-utils/openBrowser')
 const WebpackDevServerUtils = require('react-dev-utils/WebpackDevServerUtils')
 const {prepareUrls, choosePort} = WebpackDevServerUtils
 const webpack = require('webpack')
-const webpackConfig = require('../webpack.config')
+const webpackConfig = require('../../webpack.config')
 const webpackDevMiddleware = require('webpack-dev-middleware')
 const webpackHotMiddleware = require('webpack-hot-middleware')
 

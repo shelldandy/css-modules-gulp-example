@@ -1,7 +1,7 @@
 const webpack = require('webpack')
 const UglifyJSPlugin = require('uglifyjs-webpack-plugin')
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin
-const config = require('./config')
+const config = require('./gulp/config')
 const {cwd} = require('process')
 
 const production = config.production
@@ -80,7 +80,16 @@ const CONFIG = {
   plugins,
   externals: production ? {
     jquery: 'jQuery'
-  } : {}
+  } : {},
+  // Some libraries import Node modules but don't use them in the browser.
+  // Tell Webpack to provide empty mocks for them so importing them works.
+  node: {
+    dgram: 'empty',
+    fs: 'empty',
+    net: 'empty',
+    tls: 'empty',
+    child_process: 'empty'
+  }
 }
 
 module.exports = CONFIG

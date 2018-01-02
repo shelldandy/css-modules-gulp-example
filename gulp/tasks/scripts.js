@@ -1,6 +1,6 @@
 const gulp = require('gulp')
 const webpack = require('webpack')
-const webpackConfig = require('../webpack.config')
+const webpackConfig = require('../../webpack.config')
 
 gulp.task('scripts', () =>
   new Promise(resolve => webpack(webpackConfig, (err, stats) => {
