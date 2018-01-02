@@ -18,13 +18,10 @@ let plugins = [
     $: 'jquery',
     jQuery: 'jquery',
     'window.jQuery': 'jquery'
-      }),
+  }),
   new webpack.optimize.CommonsChunkPlugin({
     name: 'vendor',
     minChunks: module => /node_modules/.test(module.resource)
-  }),
-  new WebpackMonitor({
-    target: cwd() + '/gulp/stats.json'
   }),
   // Do NOT import the BLOAT from moment.js
   // thanks create-react-app
