@@ -17,6 +17,11 @@ html {
   }
 }
 
+body {
+  font: inherit;
+  line-height: inherit;
+}
+
 input,
 textarea {
   font-family: inherit;
