@@ -56,9 +56,9 @@ const CONFIG = {
     main: ENTRY_PATH
   } : {
     main: [
-      ENTRY_PATH,
-      'webpack/hot/dev-server',
-      'webpack-hot-middleware/client'
+      require.resolve('webpack-hot-middleware/client') + '?/',
+      require.resolve('webpack/hot/dev-server'),
+      ENTRY_PATH
     ]
   },
   devtool: production ? 'source-map' : 'inline-source-map',
@@ -78,7 +78,7 @@ const CONFIG = {
   output: {
     filename: production ? '[name].min.js' : '[name].js',
     path: OUTPUT_PATH,
-    publicPath: '/'
+    publicPath: '/assets/js/'
   },
   plugins,
   externals: production ? {

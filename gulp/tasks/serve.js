@@ -38,7 +38,11 @@ gulp.task('browser-sync', done => {
           cert: fakeCert.cert
         },
         middleware: [
-          webpackDevMiddleware(bundler),
+          webpackDevMiddleware(bundler, {
+            publicPath: webpackConfig.output.publicPath,
+            stats: { colors: true },
+            headers: { 'Access-Control-Allow-Origin': '*' }
+          }),
           webpackHotMiddleware(bundler)
         ],
         files: [
