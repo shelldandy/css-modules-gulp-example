@@ -526,6 +526,14 @@
     normalize-path "^2.0.1"
     through2 "^2.0.3"
 
+"@pixel2html/stylelint-config@^1.2.0":
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/@pixel2html/stylelint-config/-/stylelint-config-1.2.0.tgz#bbe164f3887c2f802164c97898797ac57c99872c"
+  dependencies:
+    stylelint-config-recommended-scss "^3.0.0"
+    stylelint-no-unsupported-browser-features "^2.0.0"
+    stylelint-scss "^2.1.0"
+
 JSONStream@^0.8.4:
   version "0.8.4"
   resolved "https://registry.yarnpkg.com/JSONStream/-/JSONStream-0.8.4.tgz#91657dfe6ff857483066132b4618b62e8f4887bd"
@@ -7909,32 +7917,23 @@ style-search@^0.1.0:
   version "0.1.0"
   resolved "https://registry.yarnpkg.com/style-search/-/style-search-0.1.0.tgz#7958c793e47e32e07d2b5cafe5c0bf8e12e77902"
 
-stylelint-config-pixel2html@^1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/stylelint-config-pixel2html/-/stylelint-config-pixel2html-1.0.0.tgz#6dc5a14bbcc5a2bd8193c23212dfc20adb49714d"
+stylelint-config-recommended-scss@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/stylelint-config-recommended-scss/-/stylelint-config-recommended-scss-3.0.0.tgz#1604a7c5774acee202bf2cedbcbde8ee5efbdecd"
   dependencies:
-    stylelint-config-recommended-scss "^2.0.0"
-    stylelint-no-unsupported-browser-features "^1.0.1"
-    stylelint-scss "^2.1.0"
+    stylelint-config-recommended "^2.0.0"
 
-stylelint-config-recommended-scss@^2.0.0:
+stylelint-config-recommended@^2.0.0:
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/stylelint-config-recommended/-/stylelint-config-recommended-2.0.1.tgz#4746119ec85f5f4663c7b5107c05c13ed0e2ab0d"
+
+stylelint-no-unsupported-browser-features@^2.0.0:
   version "2.0.0"
-  resolved "https://registry.yarnpkg.com/stylelint-config-recommended-scss/-/stylelint-config-recommended-scss-2.0.0.tgz#3f44b338afb3bf5b6bd9eebadd468eef27713922"
-  dependencies:
-    stylelint-config-recommended "^1.0.0"
-
-stylelint-config-recommended@^1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/stylelint-config-recommended/-/stylelint-config-recommended-1.0.0.tgz#752c17fc68fa64cd5e7589e24f6e46e77e14a735"
-
-stylelint-no-unsupported-browser-features@^1.0.1:
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/stylelint-no-unsupported-browser-features/-/stylelint-no-unsupported-browser-features-1.0.1.tgz#06377e0e2e8db777af4944a50d63d43171d5aec1"
+  resolved "https://registry.yarnpkg.com/stylelint-no-unsupported-browser-features/-/stylelint-no-unsupported-browser-features-2.0.0.tgz#a9dafd9c4c979c40a2f587d70c12e6ecf7f65fd3"
   dependencies:
     doiuse "^4.0.0"
     lodash "^4.17.4"
     postcss "^6.0.1"
-    stylelint ">=5.0.0"
 
 stylelint-scss@^2.1.0:
   version "2.2.0"
@@ -7946,7 +7945,7 @@ stylelint-scss@^2.1.0:
     postcss-selector-parser "^3.1.1"
     postcss-value-parser "^3.3.0"
 
-stylelint@>=5.0.0, stylelint@^8.4.0:
+stylelint@^8.4.0:
   version "8.4.0"
   resolved "https://registry.yarnpkg.com/stylelint/-/stylelint-8.4.0.tgz#c2dbaeb17236917819f9206e1c0df5fddf6f83c3"
   dependencies:

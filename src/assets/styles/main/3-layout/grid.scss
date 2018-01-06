@@ -1,2 +1,5 @@
 @import "../1-abstracts/index.scss";
-@include createGrid;
+
+:global {
+  @include createGrid;
+}

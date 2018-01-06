@@ -55,20 +55,20 @@
     "yargs": "^10.0.3"
   },
   "devDependencies": {
+    "@pixel2html/stylelint-config": "^1.2.0",
     "browser-sync": "^2.18.12",
     "create-cert-files": "^1.0.2",
     "eslint": "^4.13.1",
     "eslint-config-pixel2html": "^1.0.0",
     "react-dev-utils": "^4.2.1",
     "stylelint": "^8.4.0",
-    "stylelint-config-pixel2html": "^1.0.0",
     "webpack-bundle-analyzer": "^2.9.1",
     "webpack-dev-middleware": "^2.0.3",
     "webpack-hot-middleware": "^2.21.0",
     "webpack-monitor": "^1.0.14"
   },
   "stylelint": {
-    "extends": "stylelint-config-pixel2html"
+    "extends": "@pixel2html/stylelint-config"
   },
   "eslintConfig": {
     "extends": "pixel2html"
