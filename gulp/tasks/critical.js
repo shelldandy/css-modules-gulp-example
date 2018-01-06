@@ -14,4 +14,5 @@ gulp.task('critical', () =>
         'dist/assets/css/main.min.css'
       ]
     })).on('error', config.onError)
+    .pipe(gulp.dest(markup))
 )
