@@ -1,7 +1,12 @@
-const title = document.querySelector('h1')
+import styles from './cssModules/body.json'
 
-const changeTitle = () => {
-  title.textContent = 'HMR Is Too Good'
+const changeBodyColor = () => {
+  document.body.classList.toggle(styles.blue)
 }
 
-export default changeTitle
+const buttonListener = () => {
+  const trigger = document.querySelector('button')
+  trigger.addEventListener('click', changeBodyColor)
+}
+
+export default buttonListener

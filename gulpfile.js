@@ -8,10 +8,10 @@ requireDir('gulp', {
 
 gulp.task('build', gulp.series(
   'clean',
+  'styles',
   'images',
   'scripts',
   'fonts',
-  'styles',
   'markup'
 ))
 

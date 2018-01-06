@@ -69,7 +69,9 @@ const CONFIG = {
       use: {
         loader: 'babel-loader',
         options: {
-          presets: ['@pixel2html/babel-preset']
+          presets: [
+            require.resolve('@pixel2html/babel-preset')
+          ]
         }
       }
     }]},
