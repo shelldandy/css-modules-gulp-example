@@ -7,5 +7,5 @@ const production = config.production
 gulp.task('purify', () =>
   gulp.src(config.directories.dist.styles + '*.css')
     .pipe(when(production, $.purifycss(config.purify, { info: true })))
-    .pipe(gulp.dist(config.directories.dist.style))
+    .pipe(gulp.dest(config.directories.dist.styles))
 )
