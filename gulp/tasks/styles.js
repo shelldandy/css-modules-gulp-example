@@ -23,7 +23,7 @@ gulp.task('main:styles', () =>
   gulp.src(config.project.cssFiles)
     .pipe(when(!production, $.sourcemaps.init()))
     .pipe($.sass({importer: moduleImporter()}))
-    .on('error', $.sass.logError)
+    .on('error', config.onError)
     .pipe($.postcss(POSTCSS_PLUGINS))
     .pipe(when(production, $.groupCssMediaQueries()))
     .pipe(when(production, $.csscomb()))
@@ -40,7 +40,7 @@ gulp.task('vendor:styles', () =>
   gulp.src(config.project.cssVendorFile)
     .pipe(when(!production, $.sourcemaps.init()))
     .pipe($.sass({importer: moduleImporter()}))
-    .on('error', $.sass.logError)
+    .on('error', config.onError)
     .pipe($.postcss([
       require('autoprefixer')({browsers: config.browsers})
     ]))

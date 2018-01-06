@@ -15,7 +15,7 @@ module.exports = {
       icons: 'src/assets/icons',
       images: 'src/assets/images',
       scripts: 'src/assets/js',
-      styles: 'src/assets/styles',
+      styles: 'src/assets/css',
       cssModules: 'src/assets/js/cssModules'
     },
     dist: {
@@ -38,7 +38,9 @@ module.exports = {
   },
   onError: function (error) {
     console.log(error.toString())
-    this.emit('end')
+    production
+      ? process.exit(1)
+      : this.emit('end')
   },
   production,
   debug,
