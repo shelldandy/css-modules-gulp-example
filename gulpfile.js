@@ -12,7 +12,8 @@ gulp.task('build', gulp.series(
   'images',
   'scripts',
   'fonts',
-  'markup'
+  'markup',
+  'purify'
 ))
 
 gulp.task('serve', gulp.parallel('browser-sync', 'watch'))

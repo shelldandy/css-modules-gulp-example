@@ -32,7 +32,6 @@ gulp.task('main:styles', () =>
     .pipe(gulp.dest(config.directories.dist.styles))
 
     .pipe(when(production, $.rename({suffix: '.min'})))
-    .pipe(when(production, $.purifycss(config.purify, { info: true })))
     .pipe(when(production, $.cssnano()))
     .pipe(when(production, gulp.dest(config.directories.dist.styles)))
 )
@@ -51,7 +50,6 @@ gulp.task('vendor:styles', () =>
     .pipe(gulp.dest(config.directories.dist.styles))
 
     .pipe(when(production, $.rename({suffix: '.min'})))
-    .pipe(when(production, $.purifycss(config.purify, { info: true })))
     .pipe(when(production, $.cssnano()))
     .pipe(when(production, gulp.dest(config.directories.dist.styles)))
 )
