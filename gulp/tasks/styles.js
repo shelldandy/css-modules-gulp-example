@@ -20,7 +20,7 @@ const POSTCSS_PLUGINS = [
 ]
 
 gulp.task('main:styles', () =>
-  gulp.src(config.project.cssMainFile)
+  gulp.src(config.project.cssFiles)
     .pipe(when(!production, $.sourcemaps.init()))
     .pipe($.sass({importer: moduleImporter()}))
     .on('error', $.sass.logError)

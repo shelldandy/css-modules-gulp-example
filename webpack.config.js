@@ -69,7 +69,7 @@ const CONFIG = {
       use: {
         loader: 'babel-loader',
         options: {
-          presets: ['timmy']
+          presets: ['@pixel2html/babel-preset']
         }
       }
     }]},

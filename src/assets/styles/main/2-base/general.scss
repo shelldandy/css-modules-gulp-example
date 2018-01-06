@@ -3,8 +3,11 @@
 html {
   box-sizing: border-box;
 }
-*, *::before, *::before {
-  box-sizing: inherit;
+
+* {
+  &::before, &::after {
+    box-sizing: inherit;
+  }
 }
 
 ::selection {

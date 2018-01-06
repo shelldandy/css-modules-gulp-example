@@ -186,14 +186,14 @@
     "@babel/helper-remap-async-to-generator" "7.0.0-beta.36"
     "@babel/plugin-syntax-async-generators" "7.0.0-beta.36"
 
-"@babel/plugin-proposal-class-properties@^7.0.0-beta.32":
+"@babel/plugin-proposal-class-properties@^7.0.0-beta.36":
   version "7.0.0-beta.36"
   resolved "https://registry.yarnpkg.com/@babel/plugin-proposal-class-properties/-/plugin-proposal-class-properties-7.0.0-beta.36.tgz#be236de98ff7ccdf650b7282e8e1f5bda808017d"
   dependencies:
     "@babel/helper-function-name" "7.0.0-beta.36"
     "@babel/plugin-syntax-class-properties" "7.0.0-beta.36"
 
-"@babel/plugin-proposal-object-rest-spread@7.0.0-beta.36", "@babel/plugin-proposal-object-rest-spread@^7.0.0-beta.32":
+"@babel/plugin-proposal-object-rest-spread@7.0.0-beta.36", "@babel/plugin-proposal-object-rest-spread@^7.0.0-beta.36":
   version "7.0.0-beta.36"
   resolved "https://registry.yarnpkg.com/@babel/plugin-proposal-object-rest-spread/-/plugin-proposal-object-rest-spread-7.0.0-beta.36.tgz#9712585326ee8b1c0bd069af6583d3511d4bf66f"
   dependencies:
@@ -220,7 +220,7 @@
   version "7.0.0-beta.36"
   resolved "https://registry.yarnpkg.com/@babel/plugin-syntax-class-properties/-/plugin-syntax-class-properties-7.0.0-beta.36.tgz#a0002fa66dbb43e82402b4cc947dac0e07058818"
 
-"@babel/plugin-syntax-dynamic-import@^7.0.0-beta.32":
+"@babel/plugin-syntax-dynamic-import@^7.0.0-beta.32", "@babel/plugin-syntax-dynamic-import@^7.0.0-beta.36":
   version "7.0.0-beta.36"
   resolved "https://registry.yarnpkg.com/@babel/plugin-syntax-dynamic-import/-/plugin-syntax-dynamic-import-7.0.0-beta.36.tgz#be83ad5326e639be31bae6eba3e13029dd3ebd57"
 
@@ -349,7 +349,7 @@
     "@babel/helper-call-delegate" "7.0.0-beta.36"
     "@babel/helper-get-function-arity" "7.0.0-beta.36"
 
-"@babel/plugin-transform-react-constant-elements@^7.0.0-beta.32":
+"@babel/plugin-transform-react-constant-elements@^7.0.0-beta.36":
   version "7.0.0-beta.36"
   resolved "https://registry.yarnpkg.com/@babel/plugin-transform-react-constant-elements/-/plugin-transform-react-constant-elements-7.0.0-beta.36.tgz#b86e336821667381b3eadd04c3ac0f3e97cdf12d"
 
@@ -357,32 +357,32 @@
   version "7.0.0-beta.36"
   resolved "https://registry.yarnpkg.com/@babel/plugin-transform-react-display-name/-/plugin-transform-react-display-name-7.0.0-beta.36.tgz#9a404aae61efcb08176434f813f0996024af6ee2"
 
-"@babel/plugin-transform-react-jsx-self@7.0.0-beta.36", "@babel/plugin-transform-react-jsx-self@^7.0.0-beta.32":
+"@babel/plugin-transform-react-jsx-self@7.0.0-beta.36", "@babel/plugin-transform-react-jsx-self@^7.0.0-beta.36":
   version "7.0.0-beta.36"
   resolved "https://registry.yarnpkg.com/@babel/plugin-transform-react-jsx-self/-/plugin-transform-react-jsx-self-7.0.0-beta.36.tgz#e6cded1d86a37bea8331e73239d22ad991a359fa"
   dependencies:
     "@babel/plugin-syntax-jsx" "7.0.0-beta.36"
 
-"@babel/plugin-transform-react-jsx-source@7.0.0-beta.36", "@babel/plugin-transform-react-jsx-source@^7.0.0-beta.32":
+"@babel/plugin-transform-react-jsx-source@7.0.0-beta.36", "@babel/plugin-transform-react-jsx-source@^7.0.0-beta.36":
   version "7.0.0-beta.36"
   resolved "https://registry.yarnpkg.com/@babel/plugin-transform-react-jsx-source/-/plugin-transform-react-jsx-source-7.0.0-beta.36.tgz#ee186e8de63a052f2e4da79a543523949f9e89ae"
   dependencies:
     "@babel/plugin-syntax-jsx" "7.0.0-beta.36"
 
-"@babel/plugin-transform-react-jsx@7.0.0-beta.36", "@babel/plugin-transform-react-jsx@^7.0.0-beta.32":
+"@babel/plugin-transform-react-jsx@7.0.0-beta.36", "@babel/plugin-transform-react-jsx@^7.0.0-beta.36":
   version "7.0.0-beta.36"
   resolved "https://registry.yarnpkg.com/@babel/plugin-transform-react-jsx/-/plugin-transform-react-jsx-7.0.0-beta.36.tgz#8e672b7340beaa235d38801a6181f1dc2aed6e8a"
   dependencies:
     "@babel/helper-builder-react-jsx" "7.0.0-beta.36"
     "@babel/plugin-syntax-jsx" "7.0.0-beta.36"
 
-"@babel/plugin-transform-regenerator@7.0.0-beta.36", "@babel/plugin-transform-regenerator@^7.0.0-beta.32":
+"@babel/plugin-transform-regenerator@7.0.0-beta.36", "@babel/plugin-transform-regenerator@^7.0.0-beta.36":
   version "7.0.0-beta.36"
   resolved "https://registry.yarnpkg.com/@babel/plugin-transform-regenerator/-/plugin-transform-regenerator-7.0.0-beta.36.tgz#23853fa15297143aa4bb2730458d48ec57a01015"
   dependencies:
     regenerator-transform "^0.12.2"
 
-"@babel/plugin-transform-runtime@^7.0.0-beta.32":
+"@babel/plugin-transform-runtime@^7.0.0-beta.36":
   version "7.0.0-beta.36"
   resolved "https://registry.yarnpkg.com/@babel/plugin-transform-runtime/-/plugin-transform-runtime-7.0.0-beta.36.tgz#c1b7e29403623f2fa7a1b2055514309b2189d751"
   dependencies:
@@ -419,7 +419,7 @@
     "@babel/helper-regex" "7.0.0-beta.36"
     regexpu-core "^4.1.3"
 
-"@babel/preset-env@^7.0.0-beta.32":
+"@babel/preset-env@^7.0.0-beta.36":
   version "7.0.0-beta.36"
   resolved "https://registry.yarnpkg.com/@babel/preset-env/-/preset-env-7.0.0-beta.36.tgz#73a2cc5db2534d0f4c557cef1baaf622555146dc"
   dependencies:
@@ -462,7 +462,7 @@
     invariant "^2.2.2"
     semver "^5.3.0"
 
-"@babel/preset-react@^7.0.0-beta.32":
+"@babel/preset-react@^7.0.0-beta.36":
   version "7.0.0-beta.36"
   resolved "https://registry.yarnpkg.com/@babel/preset-react/-/preset-react-7.0.0-beta.36.tgz#c108d34477ab7110839128a1c4bc27a520ac0ac9"
   dependencies:
@@ -525,6 +525,23 @@
   dependencies:
     normalize-path "^2.0.1"
     through2 "^2.0.3"
+
+"@pixel2html/babel-preset@^0.5.0":
+  version "0.5.0"
+  resolved "https://registry.yarnpkg.com/@pixel2html/babel-preset/-/babel-preset-0.5.0.tgz#426ac1bc23637657cab2b1263088c3f3004797a6"
+  dependencies:
+    "@babel/plugin-proposal-class-properties" "^7.0.0-beta.36"
+    "@babel/plugin-proposal-object-rest-spread" "^7.0.0-beta.36"
+    "@babel/plugin-syntax-dynamic-import" "^7.0.0-beta.36"
+    "@babel/plugin-transform-react-constant-elements" "^7.0.0-beta.36"
+    "@babel/plugin-transform-react-jsx" "^7.0.0-beta.36"
+    "@babel/plugin-transform-react-jsx-self" "^7.0.0-beta.36"
+    "@babel/plugin-transform-react-jsx-source" "^7.0.0-beta.36"
+    "@babel/plugin-transform-regenerator" "^7.0.0-beta.36"
+    "@babel/plugin-transform-runtime" "^7.0.0-beta.36"
+    "@babel/preset-env" "^7.0.0-beta.36"
+    "@babel/preset-react" "^7.0.0-beta.36"
+    babel-plugin-dynamic-import-node-babel-7 "^2.0.1"
 
 "@pixel2html/eslint-config@^1.0.0":
   version "1.0.0"
@@ -1058,28 +1075,11 @@ babel-messages@^6.23.0:
   dependencies:
     babel-runtime "^6.22.0"
 
-babel-plugin-dynamic-import-node-babel-7@^2.0.0:
+babel-plugin-dynamic-import-node-babel-7@^2.0.1:
   version "2.0.1"
   resolved "https://registry.yarnpkg.com/babel-plugin-dynamic-import-node-babel-7/-/babel-plugin-dynamic-import-node-babel-7-2.0.1.tgz#1a893d03c29e09d90b8f34f8b7468ba36168cf1a"
   dependencies:
     "@babel/plugin-syntax-dynamic-import" "^7.0.0-beta.32"
-
-babel-preset-timmy@^0.3.0:
-  version "0.3.0"
-  resolved "https://registry.yarnpkg.com/babel-preset-timmy/-/babel-preset-timmy-0.3.0.tgz#28fb56d70b147393e8d7040d1c55d5086a5889a5"
-  dependencies:
-    "@babel/plugin-proposal-class-properties" "^7.0.0-beta.32"
-    "@babel/plugin-proposal-object-rest-spread" "^7.0.0-beta.32"
-    "@babel/plugin-syntax-dynamic-import" "^7.0.0-beta.32"
-    "@babel/plugin-transform-react-constant-elements" "^7.0.0-beta.32"
-    "@babel/plugin-transform-react-jsx" "^7.0.0-beta.32"
-    "@babel/plugin-transform-react-jsx-self" "^7.0.0-beta.32"
-    "@babel/plugin-transform-react-jsx-source" "^7.0.0-beta.32"
-    "@babel/plugin-transform-regenerator" "^7.0.0-beta.32"
-    "@babel/plugin-transform-runtime" "^7.0.0-beta.32"
-    "@babel/preset-env" "^7.0.0-beta.32"
-    "@babel/preset-react" "^7.0.0-beta.32"
-    babel-plugin-dynamic-import-node-babel-7 "^2.0.0"
 
 babel-register@^6.26.0:
   version "6.26.0"
