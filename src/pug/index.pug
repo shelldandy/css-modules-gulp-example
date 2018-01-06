@@ -1,15 +1,15 @@
 extends layouts/layout-primary
 
 block content
-  section(css-module='display.block')
+  section
     .container
       h1 CSS Modules Example
-      +img('mike.jpg')
+      img(src='assets/images/mike.jpg' alt='Mike3run' css-module='mike.pic')
 
       p This is a CSS Modules Example with Gulp and Webpack
       p Also featuring Hot Module Reloading and CSS Injection
       p They work with JS as well 🎩
-      button Trigger BG Color
+      button(css-module='buttons.normal') Trigger BG Color
       p Check out the source-code
 
       a(href='https://mike3run.github.io/css-modules-gulp-example/' target='_blank') Github Repo

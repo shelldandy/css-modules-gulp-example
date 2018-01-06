@@ -1,0 +1,16 @@
+@import "../1-abstracts/index.scss";
+
+.normal {
+  appearance: none;
+  border: none;
+  border-radius: 0;
+  background: none;
+  margin: 0;
+  padding: 0;
+  font: inherit;
+  line-height: inherit;
+
+  border-bottom: 2px solid;
+  color: $orange;
+  font-weight: 700;
+}
