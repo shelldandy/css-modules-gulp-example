@@ -77,7 +77,8 @@ const CONFIG = {
     }]},
   output: {
     filename: production ? '[name].min.js' : '[name].js',
-    path: OUTPUT_PATH
+    path: OUTPUT_PATH,
+    publicPath: '/'
   },
   plugins,
   externals: production ? {
