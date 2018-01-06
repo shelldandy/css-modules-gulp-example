@@ -14,9 +14,7 @@
     "lint": "npm run lint:js; npm run lint:scss",
     "debug": "NODE_ENV=development webpack --debug",
     "debug:prod": "NODE_ENV=production webpack --debug",
-    "js": "NODE_ENV=development gulp scripts",
-    "predeploy": "npm run build",
-    "deploy": "./deploy"
+    "js": "NODE_ENV=development gulp scripts"
   },
   "dependencies": {
     "@babel/core": "^7.0.0-beta.32",
