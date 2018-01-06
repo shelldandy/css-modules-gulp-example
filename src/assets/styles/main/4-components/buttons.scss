@@ -9,8 +9,11 @@
   padding: 0;
   font: inherit;
   line-height: inherit;
+  &:focus {
+    outline: 1px dotted;
+  }
 
   border-bottom: 2px solid;
   color: $orange;
-  font-weight: 700;
+  font-weight: 900;
 }

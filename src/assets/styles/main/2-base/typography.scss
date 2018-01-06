@@ -30,7 +30,7 @@ textarea {
 a {
   text-decoration: none;
   color: inherit;
-  transition: $trns-duration;
+  border-bottom: 1px solid;
   &:focus {
     outline: 1px dotted;
   }
