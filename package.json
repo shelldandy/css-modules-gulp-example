@@ -2,7 +2,7 @@
   "name": "modules",
   "description": "modules front end source code",
   "license": "MIT",
-  "repository": "http://www.pixel2html.com",
+  "repository": "https://github.com/mike3run/css-modules-gulp-example.git",
   "version": "1.0.0",
   "scripts": {
     "start": "npm install ",
@@ -14,7 +14,9 @@
     "debug": "NODE_ENV=development webpack --debug",
     "debug:prod": "NODE_ENV=production webpack --debug",
     "prod": "NODE_ENV=production gulp build --prod",
-    "js": "NODE_ENV=development gulp scripts"
+    "js": "NODE_ENV=development gulp scripts",
+    "predeploy": "npm run build",
+    "deploy": "./deploy"
   },
   "dependencies": {
     "@babel/core": "^7.0.0-beta.32",
