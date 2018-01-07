@@ -18,8 +18,16 @@ const plugins = [
       // add again but without extension
       const cssName = path.basename(cssPath, '.css')
       dirs.push(cssName)
+      // ['modules', 'home', 'hero']
       // TODO: Foreach item in the directories
       // create a single object recursively into json
+      // {
+      //  "modules": {
+      //    "home": {
+      //      "hero": json
+      //      }
+      //   }
+      // }
     }
   })
 ]
