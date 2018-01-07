@@ -21,14 +21,12 @@ const POSTCSS_PLUGINS = [
 
 gulp.task('main:styles', () =>
   gulp.src(config.project.cssFiles)
-    .pipe(when(!production, $.sourcemaps.init()))
     .pipe($.sass({importer: moduleImporter()}))
     .on('error', config.onError)
     .pipe($.postcss(POSTCSS_PLUGINS))
-    .pipe(when(production, $.groupCssMediaQueries()))
-    .pipe(when(production, $.csscomb()))
+    .pipe($.groupCssMediaQueries())
+    .pipe($.csscomb())
     .pipe($.concat('main.css'))
-    .pipe(when(!production, $.sourcemaps.write('./')))
     .pipe(gulp.dest(config.directories.dist.styles))
 
     .pipe(when(production, $.rename({suffix: '.min'})))
@@ -38,15 +36,13 @@ gulp.task('main:styles', () =>
 
 gulp.task('vendor:styles', () =>
   gulp.src(config.project.cssVendorFile)
-    .pipe(when(!production, $.sourcemaps.init()))
     .pipe($.sass({importer: moduleImporter()}))
     .on('error', config.onError)
     .pipe($.postcss([
       require('autoprefixer')({browsers: config.browsers})
     ]))
-    .pipe(when(production, $.groupCssMediaQueries()))
-    .pipe(when(production, $.csscomb()))
-    .pipe(when(!production, $.sourcemaps.write('./')))
+    .pipe($.groupCssMediaQueries())
+    .pipe($.csscomb())
     .pipe(gulp.dest(config.directories.dist.styles))
 
     .pipe(when(production, $.rename({suffix: '.min'})))
