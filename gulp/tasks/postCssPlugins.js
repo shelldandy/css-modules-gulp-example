@@ -1,36 +1,22 @@
+const path = require('path')
 const config = require('../config')
+const mergeArrays = require('./mergeArrays')
 
-let json = {}
+let cssModules = {}
 
 const plugins = [
   require('autoprefixer')({ browsers: config.browsers }),
   require('postcss-modules')({
     generateScopedName: config.production ? '[hash:base64:5]' : '[name]__[local]___[hash:base64:5]',
     getJSON: function (cssPath, json) {
-      const path = require('path')
-      // An array of directories
-      const exploded = cssPath.split(path.sep)
-      // but we only need starting from the main styles directory
+      const pathWithoutExtension = cssPath.split('.css')[0]
+      const exploded = pathWithoutExtension.split(path.sep)
       const mainIndex = exploded.indexOf('main')
-      let dirs = exploded.slice(mainIndex + 1)
-      // remove the css filename with extension
-      dirs.pop()
-      // add again but without extension
-      const cssName = path.basename(cssPath, '.css')
-      dirs.push(cssName)
-      // ['modules', 'home', 'hero']
-      // TODO: Foreach item in the directories
-      // create a single object recursively into json
-      // {
-      //  "modules": {
-      //    "home": {
-      //      "hero": json
-      //      }
-      //   }
-      // }
+      const dirs = exploded.slice(mainIndex + 1)
+      dirs.reduce(mergeArrays, cssModules)
     }
   })
 ]
 
 module.exports = plugins
-exports.checkJson = () => json
+exports.checkJson = () => cssModules
