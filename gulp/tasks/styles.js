@@ -7,8 +7,8 @@ const moduleImporter = require('sass-module-importer')
 const POSTCSS_PLUGINS = [
   require('autoprefixer')({ browsers: config.browsers }),
   require('postcss-modules')({
-    generateScopedName: production ? '[hash:base64:5]' : '[local]___[hash:base64:5]',
-    getJSON: function (cssFileName, json, outputFileName) {
+    generateScopedName: production ? '[hash:base64:5]' : '[name]__[local]___[hash:base64:5]',
+    getJSON: function (cssFileName, json) {
       const fs = require('fs-path')
       const path = require('path')
       const cssName = path.basename(cssFileName, '.css')
