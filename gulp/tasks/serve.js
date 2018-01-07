@@ -40,8 +40,7 @@ gulp.task('browser-sync', done => {
         middleware: [
           webpackDevMiddleware(bundler, {
             publicPath: webpackConfig.output.publicPath,
-            stats: { colors: true },
-            headers: { 'Access-Control-Allow-Origin': '*' }
+            stats: { colors: true }
           }),
           webpackHotMiddleware(bundler)
         ],

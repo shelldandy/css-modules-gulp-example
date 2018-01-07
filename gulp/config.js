@@ -15,7 +15,7 @@ module.exports = {
       icons: 'src/assets/icons',
       images: 'src/assets/images',
       scripts: 'src/assets/js',
-      styles: 'src/assets/css',
+      styles: 'src/assets/styles',
       cssModules: 'src/assets/js/cssModules'
     },
     dist: {

@@ -1,21 +1,29 @@
-var requireDir = require('require-dir')
-var gulp = require('gulp')
+const config = require('./gulp/config')
+const requireDir = require('require-dir')
+const gulp = require('gulp')
 
 // Add all the tasks and files, boom!
 requireDir('gulp', {
   recurse: true
 })
 
-gulp.task('build', gulp.series(
+let tasks = [
   'clean',
   'styles',
   'images',
   'scripts',
   'fonts',
-  'markup',
-  'purify',
-  'critical'
-))
+  'markup'
+]
+
+if (config.production) {
+  tasks.push(
+    'purify',
+    'critical'
+  )
+}
+
+gulp.task('build', gulp.series(...tasks))
 
 gulp.task('serve', gulp.parallel('browser-sync', 'watch'))
 gulp.task('release', gulp.series('build', 'zip'))
