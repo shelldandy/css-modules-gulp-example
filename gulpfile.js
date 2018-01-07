@@ -16,6 +16,7 @@ let tasks = [
 
 if (config.production) {
   tasks.push(
+    'minifyStyles',
     'purify',
     'critical'
   )

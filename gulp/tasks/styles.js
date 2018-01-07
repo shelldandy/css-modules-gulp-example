@@ -1,6 +1,5 @@
 const gulp = require('gulp')
 const config = require('../config')
-const when = require('gulp-if')
 const $ = require('gulp-load-plugins')()
 const production = config.production
 const moduleImporter = require('sass-module-importer')
@@ -28,10 +27,6 @@ gulp.task('main:styles', () =>
     .pipe($.csscomb())
     .pipe($.concat('main.css'))
     .pipe(gulp.dest(config.directories.dist.styles))
-
-    .pipe(when(production, $.rename({suffix: '.min'})))
-    .pipe(when(production, $.cssnano()))
-    .pipe(when(production, gulp.dest(config.directories.dist.styles)))
 )
 
 gulp.task('vendor:styles', () =>
@@ -44,10 +39,6 @@ gulp.task('vendor:styles', () =>
     .pipe($.groupCssMediaQueries())
     .pipe($.csscomb())
     .pipe(gulp.dest(config.directories.dist.styles))
-
-    .pipe(when(production, $.rename({suffix: '.min'})))
-    .pipe(when(production, $.cssnano()))
-    .pipe(when(production, gulp.dest(config.directories.dist.styles)))
 )
 
 gulp.task('styles', gulp.parallel('main:styles', 'vendor:styles'))
