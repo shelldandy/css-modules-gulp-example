@@ -20,7 +20,7 @@ const POSTCSS_PLUGINS = [
 
 gulp.task('main:styles', () =>
   gulp.src(config.project.cssFiles)
-    .pipe($.sass({importer: moduleImporter()}))
+    .pipe($.sass.sync({importer: moduleImporter()}))
     .on('error', config.onError)
     .pipe($.postcss(POSTCSS_PLUGINS))
     .pipe($.groupCssMediaQueries())
@@ -31,7 +31,7 @@ gulp.task('main:styles', () =>
 
 gulp.task('vendor:styles', () =>
   gulp.src(config.project.cssVendorFile)
-    .pipe($.sass({importer: moduleImporter()}))
+    .pipe($.sass.sync({importer: moduleImporter()}))
     .on('error', config.onError)
     .pipe($.postcss([
       require('autoprefixer')({browsers: config.browsers})
