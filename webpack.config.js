@@ -11,6 +11,7 @@ const WebpackMonitor = require('webpack-monitor')
 // When you really want to make the relationship work...
 const ENTRY_PATH = cwd() + '/' + config.project.jsMainFile
 const OUTPUT_PATH = cwd() + '/' + config.directories.dist.scripts
+const styles = cwd() + '/' + config.directories.src.cssModules
 
 let plugins = [
   // Allow everyone to use jQuery like it was global
@@ -92,6 +93,11 @@ const CONFIG = {
     net: 'empty',
     tls: 'empty',
     child_process: 'empty'
+  },
+  resolve: {
+    alias: {
+      styles
+    }
   }
 }
 
