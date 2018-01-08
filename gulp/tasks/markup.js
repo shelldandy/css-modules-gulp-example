@@ -3,10 +3,12 @@ const config = require('../config')
 const $ = require('gulp-load-plugins')()
 const production = config.production
 const fs = require('fs')
+const cssModules = require('posthtml-css-modules')
+const imgAutosize = require('posthtml-img-autosize')
 
 const POSTHTML_PLUGINS = [
-  require('posthtml-css-modules')(`${config.directories.src.cssModules}/`),
-  require('posthtml-img-autosize')({
+  cssModules(`./${config.directories.src.cssModules}`),
+  imgAutosize({
     root: `./${config.directories.dist.base}`,
     processEmptySize: true
   })

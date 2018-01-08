@@ -16,7 +16,7 @@ module.exports = {
       images: 'src/assets/images',
       scripts: 'src/assets/js',
       styles: 'src/assets/styles',
-      cssModules: 'src/assets/cssModules'
+      cssModules: 'src/assets/cssModules/cssClasses.json'
     },
     dist: {
       base: 'dist',
