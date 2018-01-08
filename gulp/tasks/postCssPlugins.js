@@ -1,4 +1,5 @@
 const path = require('path')
+const fs = require('fs-path')
 const config = require('../config')
 const _ = require('lodash')
 
@@ -14,6 +15,8 @@ const plugins = [
       const mainIndex = exploded.indexOf('main')
       const dirs = exploded.slice(mainIndex + 1)
       _.set(cssModules, dirs, json)
+      const accum = JSON.stringify(cssModules, null, 2)
+      fs.writeFileSync(config.directories.src.cssModules + '/cssModules.json', accum)
     }
   })
 ]

@@ -1,7 +1,7 @@
-import styles from '../cssmodules/modulesbody.json'
+import styles from '../cssmodules/cssModules.json'
 
 const changeBodyColor = () => {
-  document.body.classList.toggle(styles.blue)
+  document.body.classList.toggle(styles.modules.body.blue)
 }
 
 const buttonListener = () => {

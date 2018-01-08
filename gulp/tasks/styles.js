@@ -4,7 +4,7 @@ const $ = require('gulp-load-plugins')()
 const moduleImporter = require('sass-module-importer')
 const postCssPlugins = require('./postCssPlugins')
 
-gulp.task('main:styles', done => {
+gulp.task('main:styles', () =>
   gulp.src(config.project.cssFiles)
     .pipe($.sass({importer: moduleImporter()}))
     .on('error', config.onError)
@@ -13,8 +13,7 @@ gulp.task('main:styles', done => {
     .pipe($.csscomb())
     .pipe($.concat('main.css'))
     .pipe(gulp.dest(config.directories.dist.styles))
-  done()
-})
+)
 
 gulp.task('vendor:styles', () =>
   gulp.src(config.project.cssVendorFile)
