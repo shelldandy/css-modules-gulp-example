@@ -16,7 +16,7 @@ module.exports = {
       images: 'src/assets/images',
       scripts: 'src/assets/js',
       styles: 'src/assets/styles',
-      cssModules: 'src/assets/cssModules/css.json'
+      cssModules: 'node_modules/@pixel2html/css/css.json'
     },
     dist: {
       base: 'dist',

@@ -1,4 +1,4 @@
-import styles from '../../cssmodules/css.json'
+import styles from '@pixel2html/css/css.json'
 
 const changeBodyColor = () => {
   document.body.classList.toggle(styles.components.body.blue)
