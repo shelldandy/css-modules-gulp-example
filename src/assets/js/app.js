@@ -1,4 +1,4 @@
-import styles from '../cssmodules/cssClasses.json'
+import styles from '../cssmodules/css.json'
 
 const changeBodyColor = () => {
   document.body.classList.toggle(styles.components.body.blue)
