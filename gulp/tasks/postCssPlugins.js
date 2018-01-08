@@ -1,6 +1,6 @@
 const path = require('path')
 const config = require('../config')
-const mergeArrays = require('./mergeArrays')
+const _ = require('lodash')
 
 let cssModules = {}
 
@@ -13,10 +13,9 @@ const plugins = [
       const exploded = pathWithoutExtension.split(path.sep)
       const mainIndex = exploded.indexOf('main')
       const dirs = exploded.slice(mainIndex + 1)
-      dirs.reduce(mergeArrays, cssModules)
+      _.set(cssModules, dirs, json)
     }
   })
 ]
 
-module.exports = plugins
-exports.checkJson = () => cssModules
+exports.plugins = plugins
