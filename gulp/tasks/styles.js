@@ -3,6 +3,7 @@ const config = require('../config')
 const $ = require('gulp-load-plugins')()
 const moduleImporter = require('sass-module-importer')
 const postCssPlugins = require('./postCssPlugins')
+const fs = require('fs-path')
 
 gulp.task('main:styles', () =>
   gulp.src(config.project.cssFiles)
@@ -14,6 +15,12 @@ gulp.task('main:styles', () =>
     .pipe($.concat('main.css'))
     .pipe(gulp.dest(config.directories.dist.styles))
 )
+
+gulp.task('writeModules', done => {
+  const json = postCssPlugins.getJSON()
+  fs.writeFileSync(config.directories.src.cssModules, json)
+  done()
+})
 
 gulp.task('vendor:styles', () =>
   gulp.src(config.project.cssVendorFile)
@@ -27,4 +34,4 @@ gulp.task('vendor:styles', () =>
     .pipe(gulp.dest(config.directories.dist.styles))
 )
 
-gulp.task('styles', gulp.series('main:styles', 'vendor:styles'))
+gulp.task('styles', gulp.series('main:styles', 'vendor:styles', 'writeModules'))
