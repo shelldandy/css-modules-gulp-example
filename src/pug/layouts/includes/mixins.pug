@@ -2,5 +2,10 @@
 mixin svg(filename)
   !=icon(filename)
 
-mixin img(name, alt)
-  img(src=`assets/images/${name}`, alt= alt ? alt : 'An image')
+mixin h(htmlElement, module)
+  htmlElement(css-module=module)
+    if block
+      block
+
+mixin img(name, module, alt)
+  img(src=`assets/images/${name}` css-module=module alt= alt ? alt : 'An image')
