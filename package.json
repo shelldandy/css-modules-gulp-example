@@ -40,6 +40,7 @@
     "gulp-purifycss": "^0.2.0",
     "gulp-rename": "^1.2.2",
     "gulp-sass": "^3.1.0",
+    "gulp-sourcemaps": "^2.6.3",
     "gulp-zip": "^4.1.0",
     "lodash": "^4.17.4",
     "manila-mixins": "^3.5.0",

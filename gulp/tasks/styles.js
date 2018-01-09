@@ -7,12 +7,13 @@ const fs = require('fs-path')
 
 gulp.task('main:styles', () =>
   gulp.src(config.project.cssFiles)
+    .pipe($.plumber())
+    .pipe($.sourcemaps.init())
     .pipe($.sass({importer: moduleImporter()}))
     .on('error', config.onError)
     .pipe($.postcss(postCssPlugins.plugins))
-    .pipe($.groupCssMediaQueries())
-    .pipe($.csscomb())
     .pipe($.concat('main.css'))
+    .pipe($.sourcemaps.write('.'))
     .pipe(gulp.dest(config.directories.dist.styles))
 )
 
@@ -24,13 +25,14 @@ gulp.task('writeModules', done => {
 
 gulp.task('vendor:styles', () =>
   gulp.src(config.project.cssVendorFile)
+    .pipe($.plumber())
+    .pipe($.sourcemaps.init())
     .pipe($.sass({importer: moduleImporter()}))
     .on('error', config.onError)
     .pipe($.postcss([
       require('autoprefixer')({browsers: config.browsers})
     ]))
-    .pipe($.groupCssMediaQueries())
-    .pipe($.csscomb())
+    .pipe($.sourcemaps.write('.'))
     .pipe(gulp.dest(config.directories.dist.styles))
 )
 
