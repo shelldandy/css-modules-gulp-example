@@ -3,7 +3,7 @@ mixin svg(filename)
   !=icon(filename)
 
 mixin h(htmlElement, module)
-  htmlElement(css-module=module)
+  #{htmlElement}(css-module=module)
     if block
       block
 
