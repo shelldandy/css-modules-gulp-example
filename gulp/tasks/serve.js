@@ -12,7 +12,7 @@ const webpackHotMiddleware = require('webpack-hot-middleware')
 const DEFAULT_PORT = 3000
 const HOST = '0.0.0.0'
 const protocol = 'https'
-const fakeCert = require('create-cert-files')()
+const fakeCert = config.production ? undefined : require('create-cert-files')()
 const bundler = webpack(webpackConfig)
 
 gulp.task('browser-sync', done => {
