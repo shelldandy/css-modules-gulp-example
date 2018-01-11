@@ -3,14 +3,14 @@
 const argv = require('yargs').argv
 const { env } = require('process')
 // Add your conditions here 💅
-const production = env.NODE_ENV === 'production' || !!argv.prod || !!argv.production
-const debug = env.NODE_ENV === 'debug' || !!argv.debug
+const production = !!argv.prod || !!argv.production || env.NODE_ENV === 'production'
+const debug = !!argv.debug || env.NODE_ENV === 'debug'
 
 module.exports = {
   directories: {
     src: {
       base: 'src',
-      markup: 'src/pug',
+      markup: 'src',
       fonts: 'src/assets/fonts',
       icons: 'src/assets/icons',
       images: 'src/assets/images',
@@ -30,7 +30,7 @@ module.exports = {
   },
   project: {
     cssFiles: 'src/assets/styles/main/**/!(_)*.scss',
-    cssVendorFile: 'src/assets/styles/vendor.scss',
+    cssVendorFile: 'src/assets/styles/vendor/vendor.scss',
     jsMainFile: 'src/assets/js/index.js',
     fontFiles: [
       'src/assets/fonts/**/*'
@@ -38,9 +38,7 @@ module.exports = {
   },
   onError: function (error) {
     console.log(error.toString())
-    production
-      ? process.exit(1)
-      : this.emit('end')
+    if (!production) this.emit('end')
   },
   production,
   debug,
