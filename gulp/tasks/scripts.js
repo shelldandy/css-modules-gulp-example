@@ -9,7 +9,10 @@ gulp.task('scripts', () =>
     var rawMessages = stats.toJson({}, true)
     var messages = formatWebpackMessages(rawMessages)
     if (!messages.errors.length && !messages.warnings.length) {
-      console.log('Webpack Compiled Successfully!!')
+      console.log(stats.toString({
+        chunks: false,
+        colors: true
+      }))
     }
     if (messages.errors.length) {
       console.log('Failed to compile.')
