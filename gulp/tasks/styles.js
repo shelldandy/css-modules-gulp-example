@@ -7,9 +7,10 @@ const fs = require('fs-path')
 
 gulp.task('main:styles', () =>
   gulp.src(config.project.cssFiles)
+    .pipe($.plumber())
     .pipe($.sourcemaps.init())
     .pipe($.sass({importer: moduleImporter()}))
-    .on('error', config.onError)
+    .on('error', $.sass.logError)
     .pipe($.postcss(postCssPlugins.plugins))
     .pipe($.concat('main.css'))
     .pipe($.sourcemaps.write('.'))
@@ -24,9 +25,10 @@ gulp.task('writeModules', done => {
 
 gulp.task('vendor:styles', () =>
   gulp.src(config.project.cssVendorFile)
+    .pipe($.plumber())
     .pipe($.sourcemaps.init())
     .pipe($.sass({importer: moduleImporter()}))
-    .on('error', config.onError)
+    .on('error', $.sass.logError)
     .pipe($.postcss([
       require('autoprefixer')({browsers: config.browsers})
     ]))
