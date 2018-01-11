@@ -41,7 +41,7 @@
     "gulp-sass": "^3.1.0",
     "gulp-sourcemaps": "^2.6.3",
     "gulp-zip": "^4.1.0",
-    "lodash": "^4.17.4",
+    "lodash.set": "^4.3.2",
     "manila-mixins": "^3.5.0",
     "modularscale-sass": "^3.0.4",
     "postcss-modules": "^1.1.0",
