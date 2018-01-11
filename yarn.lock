@@ -220,10 +220,6 @@
   version "7.0.0-beta.37"
   resolved "https://registry.yarnpkg.com/@babel/plugin-syntax-class-properties/-/plugin-syntax-class-properties-7.0.0-beta.37.tgz#5d4e4712ee57815ebe59e63fb084353a27e2671d"
 
-"@babel/plugin-syntax-dynamic-import@^7.0.0-beta.32":
-  version "7.0.0-beta.36"
-  resolved "https://registry.yarnpkg.com/@babel/plugin-syntax-dynamic-import/-/plugin-syntax-dynamic-import-7.0.0-beta.36.tgz#be83ad5326e639be31bae6eba3e13029dd3ebd57"
-
 "@babel/plugin-syntax-dynamic-import@^7.0.0-beta.37":
   version "7.0.0-beta.37"
   resolved "https://registry.yarnpkg.com/@babel/plugin-syntax-dynamic-import/-/plugin-syntax-dynamic-import-7.0.0-beta.37.tgz#cac79651c3ab6b3cd9c0898c801b2518dd9379aa"
@@ -530,9 +526,9 @@
     normalize-path "^2.0.1"
     through2 "^2.0.3"
 
-"@pixel2html/babel-preset@^0.6.0":
-  version "0.6.0"
-  resolved "https://registry.yarnpkg.com/@pixel2html/babel-preset/-/babel-preset-0.6.0.tgz#b399de6c5e75cc11eb1100be9ebc08456bcba433"
+"@pixel2html/babel-preset@^0.6.1":
+  version "0.6.1"
+  resolved "https://registry.yarnpkg.com/@pixel2html/babel-preset/-/babel-preset-0.6.1.tgz#41ed7f5b74da9e577789eda4776a21cc67dcb45b"
   dependencies:
     "@babel/plugin-proposal-class-properties" "^7.0.0-beta.37"
     "@babel/plugin-proposal-object-rest-spread" "^7.0.0-beta.37"
@@ -545,7 +541,7 @@
     "@babel/plugin-transform-runtime" "^7.0.0-beta.37"
     "@babel/preset-env" "^7.0.0-beta.37"
     "@babel/preset-react" "^7.0.0-beta.37"
-    babel-plugin-dynamic-import-node-babel-7 "^2.0.1"
+    babel-plugin-dynamic-import-node-babel-7 "^2.0.2"
 
 "@pixel2html/eslint-config@^1.0.0":
   version "1.0.0"
@@ -1117,11 +1113,11 @@ babel-messages@^6.23.0:
   dependencies:
     babel-runtime "^6.22.0"
 
-babel-plugin-dynamic-import-node-babel-7@^2.0.1:
-  version "2.0.1"
-  resolved "https://registry.yarnpkg.com/babel-plugin-dynamic-import-node-babel-7/-/babel-plugin-dynamic-import-node-babel-7-2.0.1.tgz#1a893d03c29e09d90b8f34f8b7468ba36168cf1a"
+babel-plugin-dynamic-import-node-babel-7@^2.0.2:
+  version "2.0.2"
+  resolved "https://registry.yarnpkg.com/babel-plugin-dynamic-import-node-babel-7/-/babel-plugin-dynamic-import-node-babel-7-2.0.2.tgz#8c64cd1bd33f85e9e230536d1ce54689174415ec"
   dependencies:
-    "@babel/plugin-syntax-dynamic-import" "^7.0.0-beta.32"
+    "@babel/plugin-syntax-dynamic-import" "^7.0.0-beta.37"
 
 babel-register@^6.26.0:
   version "6.26.0"
