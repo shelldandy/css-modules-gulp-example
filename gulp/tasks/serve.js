@@ -12,7 +12,7 @@ const webpackHotMiddleware = require('webpack-hot-middleware')
 gulp.task('browser-sync', done => {
   const DEFAULT_PORT = 3000
   const HOST = '0.0.0.0'
-  const protocol = 'https'
+  const protocol = 'http'
   const bundler = webpack(webpackConfig)
   choosePort(HOST, DEFAULT_PORT)
     .then(port => {

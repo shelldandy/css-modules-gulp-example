@@ -14,6 +14,7 @@ let tasks = [
 ]
 
 if (config.production) {
+  tasks[1] = 'styles:prod'
   tasks.push(
     'minifyStyles',
     'purify',

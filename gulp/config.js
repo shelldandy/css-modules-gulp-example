@@ -10,7 +10,7 @@ module.exports = {
   directories: {
     src: {
       base: 'src',
-      markup: 'src',
+      markup: 'src/pug',
       fonts: 'src/assets/fonts',
       icons: 'src/assets/icons',
       images: 'src/assets/images',
@@ -38,30 +38,12 @@ module.exports = {
   },
   onError: function (error) {
     console.log(error.toString())
-    if (!production) this.emit('end')
+    production
+      ? process.exit(1)
+      : this.emit('end')
   },
   production,
   debug,
   // Stuff for PurifyCss
-  purify: ['./dist/**/*.js', './dist/**/*.html'],
-  deploy: {
-    ftp: {
-      user: '',
-      password: '',
-      host: '',
-      port: '21',
-      remotePath: './'
-    }
-  },
-  // For autoprefixer
-  browsers: [
-    'last 2 Chrome versions',
-    'last 2 ChromeAndroid versions',
-    'last 2 Firefox versions',
-    'last 2 Safari versions',
-    'last 2 ios versions',
-    'last 1 ie versions',
-    'last 2 Edge versions',
-    'last 2 Opera versions'
-  ]
+  purify: ['./dist/**/*.js', './dist/**/*.html']
 }
