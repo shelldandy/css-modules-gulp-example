@@ -17,7 +17,7 @@ gulp.task('markup', () =>
       cssModules: `./${config.directories.src.cssModules}`,
       imgAutoSize: {
         root: `./${config.directories.dist.base}`,
-        processEmptySize: false
+        processEmptySize: true
       }
     })())
     .on('error', config.onError)
