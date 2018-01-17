@@ -8,6 +8,7 @@ let tasks = [
   'clean',
   'styles',
   'images',
+  'head',
   'scripts',
   'fonts',
   'markup'

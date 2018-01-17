@@ -12,6 +12,7 @@ gulp.task('watch', done => {
   gulp.watch(config.directories.src.markup + '/**/*.pug', gulp.series('markup', reload))
   gulp.watch(config.directories.src.icons + '/**/*.svg', gulp.series('markup', reload))
   gulp.watch(config.directories.src.images + '/**/*', gulp.series('images', reload))
+  gulp.watch(config.directories.src.base + '/assets/head/**/*', gulp.series('head', reload))
   // Fonts
   gulp.watch(config.project.fontFiles, gulp.series('fonts', reload))
   // styles
