@@ -1,5 +1,7 @@
 @import "../abstracts/index.scss";
 
+@include global-reset;
+
 html {
   box-sizing: border-box;
 }

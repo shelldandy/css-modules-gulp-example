@@ -12,14 +12,4 @@ gulp.task('main:styles:prod', () =>
     .pipe(gulp.dest(config.directories.dist.styles))
 )
 
-gulp.task('vendor:styles:prod', () =>
-  gulp.src(config.project.cssVendorFile)
-    .pipe(styles({
-      modules: false,
-      name: 'vendor.css',
-      production: config.production
-    })())
-    .pipe(gulp.dest(config.directories.dist.styles))
-)
-
-gulp.task('styles:prod', gulp.series('main:styles:prod', 'vendor:styles:prod', 'writeModules'))
+gulp.task('styles:prod', gulp.series('main:styles:prod', 'writeModules'))
