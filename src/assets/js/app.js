@@ -1,11 +1,15 @@
 import styles from 'styles'
 
+const {components} = styles
+
+const trigger = document.querySelector('button')
+
 const changeBodyColor = () => {
-  document.body.classList.toggle(styles.components.body.blue)
+  document.body.classList.toggle(components.body.blue)
+  trigger.classList.toggle(components.buttons.white)
 }
 
 const buttonListener = () => {
-  const trigger = document.querySelector('button')
   trigger.addEventListener('click', changeBodyColor)
 }
 
