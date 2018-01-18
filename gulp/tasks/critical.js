@@ -5,7 +5,7 @@ const critical = require('@pixel2html/pipes').critical
 const markup = config.directories.dist.markup
 
 gulp.task('critical', () =>
-  gulp.src(config.directories.dist.markup + '/*.html')
+  gulp.src(config.directories.dist.markup + '/index.html')
     .pipe(critical({
       base: markup + '/',
       inline: true,
