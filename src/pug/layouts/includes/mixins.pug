@@ -2,8 +2,9 @@
 mixin svg(filename)
   !=icon(filename)
 
+//- https://pugjs.org/language/mixins.html#mixin-attributes
 mixin h(htmlElement, module)
-  #{htmlElement}(css-module=module)
+  #{htmlElement}(css-module=module)&attributes(attributes)
     if block
       block
 

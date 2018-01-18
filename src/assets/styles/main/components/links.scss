@@ -1,0 +1,15 @@
+@import "../abstracts/index.scss";
+
+.lighthouse {
+  color: $main-color;
+  display: block;
+  font-weight: 700;
+  max-width: 50%;
+  margin-top: 1em;
+  border-bottom: none;
+}
+
+.insights {
+  composes: lighthouse;
+  color: $black;
+}
