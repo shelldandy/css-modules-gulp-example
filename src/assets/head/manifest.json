@@ -4,6 +4,7 @@
   "start_url": "/",
   "display": "standalone",
   "background_color": "#3e456c",
+  "theme_color": "#3e456c",
   "description": "CSS Modules Gulp Example",
   "icons": [
     {
