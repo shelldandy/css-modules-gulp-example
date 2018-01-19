@@ -29,6 +29,7 @@
     "manila-mixins": "^3.6.0",
     "modularscale-sass": "^3.0.4",
     "require-dir": "^0.3.2",
+    "sw-precache-webpack-plugin": "^0.11.4",
     "uglifyjs-webpack-plugin": "^1.1.6",
     "webpack": "^3.10.0",
     "yargs": "^10.1.1"

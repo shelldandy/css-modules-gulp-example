@@ -9,9 +9,9 @@ let tasks = [
   'styles',
   'images',
   'head',
-  'scripts',
   'fonts',
-  'markup'
+  'markup',
+  'scripts'
 ]
 
 if (config.production) {

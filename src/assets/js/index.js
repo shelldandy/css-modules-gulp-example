@@ -1,4 +1,5 @@
 import App from './app'
+import registerServiceWorker from './registerServiceWorker'
 
 App()
 
@@ -8,3 +9,6 @@ if (module.hot) {
     NextApp()
   })
 }
+
+// Optional Service Worker for offline cache
+registerServiceWorker()
