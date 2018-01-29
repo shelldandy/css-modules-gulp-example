@@ -5,6 +5,7 @@ const { env } = require('process')
 // Add your conditions here 💅
 const production = !!argv.prod || !!argv.production || env.NODE_ENV === 'production'
 const debug = !!argv.debug || env.NODE_ENV === 'debug'
+const tunnel = !!argv.tunnel
 
 module.exports = {
   directories: {
@@ -44,6 +45,7 @@ module.exports = {
   },
   production,
   debug,
+  tunnel,
   // Stuff for PurifyCss
   purify: ['./dist/**/*.js', './dist/**/*.html']
 }
