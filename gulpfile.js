@@ -4,21 +4,16 @@ const prod = config.production
 
 const common = [
   'cssModulesWrite',
-  'fonts',
-  'markup',
-  'scripts',
-  'static',
+  'fonts', 'markup',
+  'scripts', 'static',
   'styles'
 ]
 const development = [
-  'serve',
-  'watch'
+  'serve', 'watch'
 ]
 const production = [
-  'critical',
-  'minifyStyles',
-  'purify',
-  'styles-production',
+  'critical', 'minifyStyles',
+  'purify', 'styles-production',
   'zip'
 ]
 
@@ -27,17 +22,19 @@ prod
   ? production.forEach(file => require(`./gulp/production/${file}`))
   : development.forEach(file => require(`./gulp/development/${file}`))
 
+const prodTasks = [
+  'minifyStyles',
+  'purify',
+  'critical'
+]
+
 let tasks = [
   'clean',
   prod ? 'styles:prod' : 'styles',
-  'images',
-  'head',
-  'scripts',
-  'fonts',
+  'images', 'head',
+  'scripts', 'fonts',
   'markup',
-  prod && 'minifyStyles',
-  prod && 'purify',
-  prod && 'critical'
+  prod && [...prodTasks]
 ]
 
 const filteredTasks = tasks.filter(task => !!task)
