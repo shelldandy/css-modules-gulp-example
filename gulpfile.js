@@ -1,5 +1,6 @@
 const config = require('./gulp/config')
 const gulp = require('gulp')
+const prod = config.production
 
 const common = [
   'cssModulesWrite',
@@ -9,12 +10,10 @@ const common = [
   'static',
   'styles'
 ]
-
 const development = [
   'serve',
   'watch'
 ]
-
 const production = [
   'critical',
   'minifyStyles',
@@ -24,32 +23,29 @@ const production = [
 ]
 
 common.forEach(file => require(`./gulp/common/${file}`))
+prod
+  ? production.forEach(file => require(`./gulp/production/${file}`))
+  : development.forEach(file => require(`./gulp/development/${file}`))
 
 let tasks = [
   'clean',
-  config.production ? 'styles:prod' : 'styles',
+  prod ? 'styles:prod' : 'styles',
   'images',
   'head',
   'scripts',
   'fonts',
-  'markup'
+  'markup',
+  prod && 'minifyStyles',
+  prod && 'purify',
+  prod && 'critical'
 ]
 
-if (config.production) {
-  tasks.push(
-    'minifyStyles',
-    'purify',
-    'critical'
-  )
-}
+const filteredTasks = tasks.filter(task => !!task)
+gulp.task('build', gulp.series(...filteredTasks))
 
-gulp.task('build', gulp.series(...tasks))
-
-if (config.production) {
-  production.forEach(file => require(`./gulp/production/${file}`))
+if (prod) {
   gulp.task('release', gulp.series('build', 'zip'))
 } else {
-  development.forEach(file => require(`./gulp/development/${file}`))
   gulp.task('serve', gulp.parallel('browser-sync', 'watch'))
   gulp.task('default', gulp.series('build', 'serve'))
 }
