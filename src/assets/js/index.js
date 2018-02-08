@@ -3,7 +3,6 @@ import registerServiceWorker from './registerServiceWorker'
 
 App()
 
-if (module.hot) module.hot.accept('./app', () => App())
-
-// Optional Service Worker for offline cache
-registerServiceWorker()
+if (process.env.NODE_ENV === 'production') {
+  registerServiceWorker()
+}

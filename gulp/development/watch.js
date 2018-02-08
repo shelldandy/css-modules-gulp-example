@@ -17,5 +17,7 @@ gulp.task('watch', done => {
   gulp.watch(config.project.fontFiles, gulp.series('fonts', reload))
   // styles
   gulp.watch(config.directories.src.styles + '/**/*.scss', gulp.series('styles'))
+  // Scripts
+  gulp.watch(config.directories.src.scripts + '/**/*.js', gulp.series('scripts', reload))
   done()
 })

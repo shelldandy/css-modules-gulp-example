@@ -8,7 +8,7 @@ gulp.task('markup', () =>
   gulp.src(config.directories.src.markup + '/*.pug')
     .pipe(pug({
       pug: {
-        baseDir: config.directories.src.markup,
+        basedir: config.directories.src.markup,
         locals: {
           icon: name => fs.readFileSync(`./src/assets/icons/${name}.svg`),
           production

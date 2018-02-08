@@ -1,10 +1,9 @@
 'use strict'
 // We use this to read flags in the command line
 const argv = require('yargs').argv
-const { env } = require('process')
 // Add your conditions here 💅
-const production = !!argv.prod || !!argv.production || env.NODE_ENV === 'production'
-const debug = !!argv.debug || env.NODE_ENV === 'debug'
+const production = !!argv.prod || !!argv.production
+const debug = !!argv.debug
 const tunnel = !!argv.tunnel
 
 module.exports = {

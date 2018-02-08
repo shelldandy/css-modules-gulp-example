@@ -12,7 +12,9 @@ $ npm run code
 ### Other available npm commands
 
 ```
-$ npm run build //build the project without serving
+$ npm run build // build the project without serving
+
+$ npm run code --tunnel // create a tunnel to share your project everywhere
 ```
 
 ## File Structure
@@ -136,15 +138,13 @@ fontFiles: [
 ### Styles
 * `$ gulp styles` Compile, concat, autoprefix, minify and move [SCSS, Less, Stylus] project files
 
-
-
 ### Daemons
 * `$ gulp watch` **Watch** your files and autoexecute gulp directives
 * `$ gulp serve` **Watch** your files and **serve** with an HTTP server and **Sync** with your prefered browser _awesome!_
 
 ### Delivery
  * `$ gulp build` Execute all the gulp directives and makes a `.zip` file with the latest code.
- 
+
 ### FTP Upload
 * `$ gulp ftp` will upload your dist folder via FTP you must specify the credentials on the `config.deploy.ftp` object. It's powered by: [Vinyl-FTP](https://www.npmjs.com/package/vinyl-ftp)
 
@@ -156,4 +156,4 @@ Sublime Text, Visual Studio, Emacs Notepad++ and more.
 
 ---
 
-##### Generated with 💕 by Pixel2HTML v2.3.1 @ 2018-01-16T18:42:02-06:00
+##### Generated with 💕 by Pixel2HTML v2.3.2 @ 2018-02-08T15:58:14-06:00
